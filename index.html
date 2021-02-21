@@ -26,7 +26,10 @@
 <!-- ============ BEGINNING OF SLIDE CONTENT =========== -->
 
 <textarea data-template>
-# RRRF:<br/> A Typology of Repeating Research
+<br/>
+
+### A Typology of Repeating Research<br/>for Computational Literary Studies
+<br/>
 <hr/>
 <br/>Christof Schöch (Trier)
 <br/><br/>
@@ -34,59 +37,140 @@
 <p><strong>slides: <a href="https://dh-trier.github.io/rrrf/#/">dh-trier.github.io/rrrf/</a></strong></p>
 <p><strong><emph>Replication and CLS | Feb 23, 2021</strong></p>
 <hr/>
-<img height="50" data-src="img/basics/uni-trier.png">
+<img height="40" data-src="img/basics/uni-trier.png">
+
+:: 
+- Note that I use "repeating research" as a neutral umbrella term
+- RR = any research that repeats an earlier study
+- Several perspectives
+- (a) Retrospective: What kind of repetition has been done (replication, reproduction, etc. 
+- (b) Prospective: Can the results of a study be repeated (replicability, reproducibility, etc.)
 
 
 --
-## Why does Reproducibility Matter? 
+## (1) Why does Repeating Research Matter? 
+
+
+---
+### Why has it come to be an issue?
+* Why is it relevant? <!-- .element: class="fragment" data-fragment-index="1" -->
+    * Relates to issues of trust and reliability of research
+    * Relates to generalizability and robustness of research
+* Why is it timely?  <!-- .element: class="fragment" data-fragment-index="2" -->
+    * Recently, repeatability of research has come to be questioned
+    * First in biomedicine and psychology, now also in ML, NLP, CLS
+
+::
+- Basic idea: corroboration of results through multiple studies
+- This has proved to be more difficult thatn expected, in: Biomedicine, Biology, Psychology, etc.  (and CLS, recently)
+- Traditionally, this has been solved via "authority" (experience, seniority, earlier solid research)
+- In the humanities, we have come to replace authority with "intersubjective plausibility", supported by clear argumentation and representative, supporting examples. 
+- In CLS, because it works with code and data, this has shifted: 
+- (a) Clear argumentation needs to be supplemented by executeable code
+- (b) And representative examples are replaced by charts summarizing the results
+- Basically, we move from trust, via understanding, to testing
 
 
 
 --
-## A Typology of Repeating Research
+## (2) A Typology of Repeating Research
+
+::
+- The "reliability" gap as quickly led to quite confusing terminology, with a range of terms: 
+- Replicability, reproducibility, re-analysis, 
+- I believe that a first step in a better understanding of repeating research is clear terminology
+- Such a terminology should be grounded in a clear understanding of structure of the field
 
 
 ---
 #### Dimensions of the typology
-* Three key factors
+* Three (four) key dimensions <!-- .element: class="fragment" data-fragment-index="1" -->
   * research question
-  * dataset used
   * method / implementation
-* Each can be
+  * dataset used
+  * (person or team)
+* Each dimension can be <!-- .element: class="fragment" data-fragment-index="2" -->
   * identical
   * more or less similar
   * different 
+
+::
+- In the sciences, there is often a fourth dimension: same person/team or different person/team conducting the experiment.
+- Advantage of a typological and conceptual approach: the labels become secondary (labels are source of confusion)
+- Important to me: conceptual typology, with labels that are ultimately exchangeable
 
 
 ---
 #### Typology (same research question)
 <img height="500" data-src="img/replication-typology-a.jpg">
 
+::
+- (1) Same data, same method
+- Everything has to be available! Code and data
+- Does not add new evidence; just checks everything works as it should.
+- Sciences: difference between same person (intra-run) or different person/lab (between-run R; with separate stdev associated with each). 
+- (2) Same method, new (comparable but different) data
+- This adds new evidence: are the results just a chance product of the data or not? Supports generalization. 
+- (3) Same data, but new method / implementation of the method
+- Also adds new evidence: corroborates findings, shows robustness. 
+
 
 ---
 #### Typology (different research question)
 <img height="500" data-src="img/replication-typology-b.jpg">
 
+::
+- We'll skip this today. 
+- The relationship between earlier and later study is necessarily looser, here. 
+- Less controversial, because the results don't need to be similar. 
+
+
 
 --
-## Affordances of a Typology
+## (3) Affordances of the Typology
 
 ---
 ### Affordances
-* Structure: Structures the field of RR
-* Terminology: Set of terms with relational, differentiated meaning
-* Practice: What is needed for specific types of R?
-* defines systematic relations between the types
-* defines relation to benchmarking and evaluation
-* helps identify similar studies across disciplinary boundaries
-* contribute to establishing replication as part of CLS
+* Structure <!-- .element: class="fragment" data-fragment-index="1" -->
+    * Structures the field of RR
+    * Systematic relations between kinds of RR
+* Terminology <!-- .element: class="fragment" data-fragment-index="2" -->
+    * Conceptual typology first, labels second
+    * Terms have relational, differentiated meaning
+    * Supports translating terminology between communities
+* Practice <!-- .element: class="fragment" data-fragment-index="3" -->
+    * What needs to be provided to enable specific type of RR?
+    * Clarity on what to expect from a given RR study
+    * Helps identify similar studies across disciplines
+* Strategy <!-- .element: class="fragment" data-fragment-index="4" -->
+    * Helps establish RR as part of CLS
 
 
 --
 ## Conclusion
-* Replication as an individual effort: routinely make code and data available
-* Replication as a community effort: organize, together, a continual replication process
 
+---
+### Conclusion
+* Who is concerned by RR? <!-- .element: class="fragment" data-fragment-index="1" -->
+    * An individual effort: routinely make code and data available
+    * A community effort: organize, together, a continual replication process
+* How to support RR? <!-- .element: class="fragment" data-fragment-index="2" -->
+    * Help make papers repeatable: Establish reporting standards for RR
+    * Support practice of RR: Establish a RR publication category
+    * Create incentives for RR: e.g. best RR paper award
+
+
+
+---
+### Recommended Readings
+<small>
+
+* Huber, Eva, and Çağrı Çöltekin, ‘Reproduction and Replication: A Case Study with Automatic Essay Scoring’, in Proceedings of the 12th Language Resources and Evaluation Conference (presented at the LREC 2020, Marseille, France: European Language Resources Association, 2020), pp. 5603–13 <https://www.aclweb.org/anthology/2020.lrec-1.688> [accessed 21 February 2021]
+* Peng, Roger, ‘The Reproducibility Crisis in Science: A Statistical Counterattack’, Significance, 12.3 (2015), 30–32 <https://doi.org/10.1111/j.1740-9713.2015.00827.x>
+* Plesser, Hans E., ‘Reproducibility vs. Replicability: A Brief History of a Confused Terminology’, Frontiers in Neuroinformatics, 11 (2018) <https://doi.org/10.3389/fninf.2017.00076>
+* Romero, Felipe, ‘Philosophy of Science and the Replicability Crisis’, Philosophy Compass, 14.11 (2019), e12633 <https://doi.org/10.1111/phc3.12633>
+
+</small>
 
 
 
