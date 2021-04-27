@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>RRRF 2021</title>
+	<title>TRR 2021</title>
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
 	<link rel="stylesheet" href="dist/theme/simple.css" id="theme">
@@ -28,14 +28,14 @@
 <textarea data-template>
 <br/>
 
-### A Typology of Repeating Research<br/>for Computational Literary Studies
+### A Typology of Reproducible Research:<br/>Concepts, Terms, Examples
 <br/>
 <hr/>
 <br/>Christof Schöch (Trier)
 <br/><br/>
 <hr/>
 <p><strong>slides: <a href="https://dh-trier.github.io/trr/#/">dh-trier.github.io/trr/</a></strong></p>
-<p><strong><emph>Replication and CLS | Feb 23, 2021</strong></p>
+<p><strong><emph>Reproducible Research, Leiden University Library, April 29, 2021</strong></p>
 <hr/>
 <img height="40" data-src="img/basics/uni-trier.png">
 
@@ -90,16 +90,16 @@ peer-review&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb
 * Why is it timely?  <!-- .element: class="fragment" data-fragment-index="2" -->
     * Recently, repeatability of research has come to be questioned
     * First in biomedicine and psychology
-    * More recently also in ML, NLP and CLS
+    * More recently also in ML, NLP and DH
 
 ::
 - Basic idea: corroboration of results through multiple studies
-- This has proved to be more difficult thatn expected, in: Biomedicine, Biology, Psychology, etc.  (and CLS, recently)
+- This has proved to be more difficult than expected, in: Biomedicine, Biology, Psychology, etc.  (and CLS, recently)
 - In the humanities, we usually use "intersubjective plausibility", supported by clear argumentation and representative, supporting examples. 
-- In CLS, because it works with code and data, this has shifted: 
+- In Digital Humanities, because it works with code and data, this has shifted: 
 - (a) Clear argumentation needs to be supplemented by executeable code
 - (b) And representative examples are replaced by charts summarizing the results
-- And this is why RR becomes important in CLS
+- This is why RR now becomes important also in DH
 
 
 
@@ -110,42 +110,66 @@ peer-review&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb
 - The terminology is actually quite confusing, with a range of terms: 
 - Replicability, reproducibility, re-analysis, 
 - I believe that a first step in a better understanding of repeating research is clear terminology
-- Such a terminology should be grounded in a clear understanding of structure of the field
+- Such a terminology should be grounded in a clear understanding of the conceptual structure of the problem
+- Advantage of a typological and conceptual approach: the labels become secondary (labels are source of confusion)
+- Important to me: conceptual typology, with labels that are ultimately exchangeable
 
 
 ---
-#### Dimensions of the typology
-* Three (four) key dimensions <!-- .element: class="fragment" data-fragment-index="1" -->
-  * research question
-  * method / implementation
-  * dataset used
-  * (person or team)
-* Each dimension can be <!-- .element: class="fragment" data-fragment-index="2" -->
-  * identical
-  * more or less similar
-  * different 
+#### A 3-dimensional concept space
+<img height="500" data-src="img/trr-cube.jpg">
 
 ::
-- In the sciences, there is often a fourth dimension: same person/team or different person/team conducting the experiment.
-- Advantage of a typological and conceptual approach: the labels become secondary (labels are source of confusion)
-- Important to me: conceptual typology, with labels that are ultimately exchangeable
-- As we will see, each type of RR also provides a specific kind of corroborating evidence for research; 
+- Three (four) key dimensions
+  - research question
+  - method (sometimes distinct: implementation)
+  - dataset used
+  - In the sciences, there is sometimes a 4th dimensions: person / team / lab
+- Each dimension can be identical, more or less similar, different 
 
 
 ---
 #### Typology (same research question)
 <img height="500" data-src="img/replication-typology-a.jpg">
 
+
+---
+### Same method, same data
+- Proposed term: replication (of the experiment)
+- Function: quality check
+- New knowledge: little
+- Requirements: very high<br/>(code and data need to be available)
+
+---
+### Same method, different data
+- Proposed term: reproduction (of the results)
+- Function: check generalizability of method
+- New knowledge: yes, supports generalization
+- Requirements: high<br/>(code needs to be available)
+
+
+---
+### Different method, same data
+- Proposed term: re-analysis (of the data)
+- Function: check robustness of results
+- New knowledge: yes, shows robustness
+- Requirements: high<br/>(data needs to be available)
+
+
+---
+### An Example from CLS
+<img height="200" data-src="img/epistemologica_Mendenhall-1918-Wikipedia.jpg"> <!-- .element: class="fragment" data-fragment-index="1" -->
+<img height="200" data-src="img/epistemologica_mendenhall-oliver-twist.png"> <!-- .element: class="fragment" data-fragment-index="2" -->
+<br/><img height="200" data-src="img/epistemologica_twist-full.png"> <!-- .element: class="fragment" data-fragment-index="4" -->
+<img height="200" data-src="img/epistemologica_twist-1000.png"> <!-- .element: class="fragment" data-fragment-index="3" -->
+<p><small>Stéfan Sinclair and Geoffrey Rockwell: Epistemologica, 2015-2019, <a href="https://github.com/sgsinclair/epistemologica/">https://github.com/sgsinclair/epistemologica/</a>, repeating T. C. Mendenhall's "The Characteristic Curves of Composition" (1887). </small></p>
+
+
+
+
 ::
-- (1) Same data, same method
-- Everything has to be available! Code and data
-- Does not add new evidence; just checks everything works as it should.
-- Sciences: difference between same person (intra-run) or different person/lab (between-run R; with separate stdev associated with each). 
-- (2) Same method, new (comparable but different) data
-- This adds new evidence: are the results just a chance product of the data or not? Supports generalization. 
-- (3) Same data, but new method / implementation of the method
-- Also adds new evidence: corroborates findings, shows robustness. 
 - A take-away for me when practicing RR has been that exact replication of an experiment is useful, but not terribly exciting; it becomes more interesting, and more of a learning opportunity, when you introduce slight differences; modify code; re-implement the methode; new dataset, etc.
+
 
 
 ---
@@ -170,20 +194,22 @@ peer-review&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb
 * Terminology <!-- .element: class="fragment" data-fragment-index="2" -->
     * Conceptual typology first, labels second
     * Terms have relational, differentiated meaning
+    * Helps check the meaning of a term in use
     * Supports translating terminology between communities
 * Practice <!-- .element: class="fragment" data-fragment-index="3" -->
     * What needs to be provided to enable specific type of RR?
     * Clarity on what to expect from a given RR study
     * Helps identify similar studies across disciplines
 * Strategy <!-- .element: class="fragment" data-fragment-index="4" -->
-    * Helps establish RR as part of CLS
+    * Helps establish RR as part of DH
+
 
 
 ---
-### A way forward?
+### A way forward for DH?
 * Who is concerned by RR? <!-- .element: class="fragment" data-fragment-index="1" -->
     * An individual effort: routinely make code and data available
-    * A community effort: organize, together, a continual replication process
+    * A community effort: organize a joint, continual replication process
 * How to support RR? <!-- .element: class="fragment" data-fragment-index="2" -->
     * Help make papers repeatable: Establish reporting standards for RR
     * Support practice of RR: Establish a RR publication category
